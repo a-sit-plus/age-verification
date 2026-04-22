@@ -30,7 +30,7 @@ import at.asitplus.wallet.ageverification.AgeVerificationScheme.Attributes.AGE_O
 import at.asitplus.wallet.ageverification.AgeVerificationScheme.Attributes.AGE_OVER_68
 import at.asitplus.wallet.lib.agent.SubjectCredentialStore
 import at.asitplus.wallet.lib.data.CredentialToJsonConverter
-import de.infix.testBalloon.framework.testSuite
+import de.infix.testBalloon.framework.core.testSuite
 import io.kotest.assertions.withClue
 import io.kotest.matchers.nulls.shouldNotBeNull
 import io.kotest.matchers.shouldBe
@@ -43,7 +43,7 @@ import kotlin.time.Clock
 
 val IsoSerializationTest by testSuite {
 
-    "Serialization and deserialization" {
+    test("Serialization and deserialization") {
         dataMap().entries.forEach {
             withClue("key=${it.key}") {
                 val item = it.toIssuerSignedItem()
@@ -58,7 +58,7 @@ val IsoSerializationTest by testSuite {
         }
     }
 
-    "Serialization to JSON Element" {
+    test("Serialization to JSON Element") {
         val mso = MobileSecurityObject(
             version = "1.0",
             digestAlgorithm = "SHA-256",

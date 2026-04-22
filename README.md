@@ -35,6 +35,9 @@ Please note that we did not implement zero-knowledge proofs.
 
 ## Changelog
 
+Release 1.1.0:
+ - Upgrade to Kotlin 2.3.0, VC-K 5.12.0
+
 Release 1.0.0:
  - Initial release, based on specification per November 2025
 
